@@ -33,7 +33,7 @@ def stage():
         if source.is_file(): copy(source.relative_to(ROOT), Path('skills')/source.relative_to(ROOT/'skills'))
     for source in (ROOT/'server').glob('android*.py'): copy(source.relative_to(ROOT), source.relative_to(ROOT))
     for name in ('LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.android.md', 'requirements-android.txt',
-                 'assets/android-screen.html', 'assets/android-icon.svg', 'NOTICE.android.md', 'scripts/launch_android.py',
+                 'assets/android-screen.html', 'assets/android-icon.svg', 'assets/android-use-demo.png', 'NOTICE.android.md', 'scripts/launch_android.py',
                  'scripts/install-android.ps1', 'VALIDATION.android.md', 'README.en.md', 'tests/test_android.py', 'tests/test_android_live.py'):
         copy(name, name)
     for source in (ROOT/'ui').rglob('*'):

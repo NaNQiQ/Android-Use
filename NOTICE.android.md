@@ -11,4 +11,4 @@ Android runtime dependencies are installed separately:
 - [Pillow](https://github.com/python-pillow/Pillow): screenshot and preview image encoding.
 - [MCP Apps SDK](https://github.com/modelcontextprotocol/ext-apps): upstream UI host transport.
 
-Dependency license files remain with their respective installed packages. The Android distribution includes no Apple signing data, phone identifiers, screenshots, UI content, Python environment or scrcpy binary.
+Dependency license files remain with their respective installed packages. The Android distribution includes no Apple signing data, personal device configuration, runtime screenshots or logs, Python environment or scrcpy binary. The maintainer-provided README demonstration image is included as a documentation asset.
