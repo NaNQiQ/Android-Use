@@ -1,0 +1,28 @@
+name: Check Android Use
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  android:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Android dependencies
+        run: python -m pip install -r requirements-android.txt
+      - name: Test Android backend
+        run: python tests/test_android.py
+      - run: npm ci --prefix ui --no-audit --no-fund
+      - name: Build Android sidebar
+        run: npm run build --prefix ui
+      - name: Test Android sidebar
+        run: npm test --prefix ui
+      - name: Verify generated sidebar
+        run: git diff --exit-code -- assets/android-screen.html
+      - name: Package Android plugin
+        run: python scripts/package_android.py

@@ -1,0 +1,20 @@
+{
+  "name": "android-use-screen-widget",
+  "version": "0.2.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:android": "tsc --noEmit && node build.android.mjs",
+    "test:android": "node test.android.mjs",
+    "build": "tsc --noEmit && node build.android.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node test.android.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "1.7.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11",
+    "typescript": "5.9.3"
+  }
+}

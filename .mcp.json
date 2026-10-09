@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "android_use": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_android.py"
+      ],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

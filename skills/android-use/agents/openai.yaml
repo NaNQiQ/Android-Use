@@ -1,0 +1,6 @@
+interface:
+  display_name: "Android Use"
+  short_description: "Control a connected Android phone with local USB tools"
+  default_prompt: "Use $android-use:android-use to check my connected Android phone and open its screen."
+policy:
+  allow_implicit_invocation: true

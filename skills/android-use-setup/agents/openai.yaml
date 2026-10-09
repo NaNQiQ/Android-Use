@@ -1,0 +1,6 @@
+interface:
+  display_name: "Android Use Setup"
+  short_description: "Set up and recover Android USB automation on Windows"
+  default_prompt: "Use $android-use:android-use-setup to configure my connected Android phone and verify readiness."
+policy:
+  allow_implicit_invocation: true
